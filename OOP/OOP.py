@@ -1,22 +1,19 @@
-class PlayerCharacter:
-    # Static class
-    membership = True
-    def __init__(self,name,age):
+#Given the below class:
+class Cat:
+    species = 'mammal'
+    def __init__(self, name, age):
         self.name = name
         self.age = age
 
-    def run(self):
-        print("run")
-        return 'done'
+# 1 Instantiate the Cat object with 3 cats
+cat1 = Cat("Tom", 3)
+cat2 = Cat("Newton", 6)
+cat3 = Cat("Garfield", 4)
 
-    def shout(self):
-        return f'My name is {self.name}'
+# 2 Create a function that finds the oldest cat
+def oldestCat():
+    cats = [cat1.age,cat2.age,cat3.age]
+    return max(cats)
 
-
-player1 = PlayerCharacter("Cindy", 33)
-player2 = PlayerCharacter("Tom", 40)
-
-player2.attack = 50
-
-print(player1.shout())
-print(player2.shout())
+# 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
+print(f'The oldest cat is {oldestCat()} years old.')
